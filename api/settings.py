@@ -6,28 +6,24 @@
 #
 import os
 
+import api.sensitive_settings
+
+#
+# Sensitive settings
+#
+ALLOWED_HOSTS = api.sensitive_settings.ALLOWED_HOSTS
+DATABASES = api.sensitive_settings.DATABASES
+SECRET_KEY = api.sensitive_settings.SECRET_KEY
+
 #
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #
-# SECURITY WARNING: keep the secret key used in production secret!
-#
-SECRET_KEY = 'v8kt6jdbd2!!9!08der(@6k+fsb=qn6yv1xep_%pw7vlw@_x+p'
-
-#
 # Debug mode:
 #
 DEBUG = True
-
-#
-# Allowed host:
-#
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-]
 
 #
 # Application definition
@@ -79,20 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'api.wsgi.application'
-
-#
-# Database
-#
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lod',
-        'USER': 'lod_backend',
-        'PASSWORD': 'zvxmhwfn',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
 
 #
 # Password validation
