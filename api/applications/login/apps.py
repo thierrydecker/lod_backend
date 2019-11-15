@@ -10,3 +10,7 @@ class LoginConfig(AppConfig):
     # label used in AUTH_USER_MODEL
     #
     label = 'login'
+    #
+    # Application description
+    #
+    verbose_name = 'Credentials administration'
