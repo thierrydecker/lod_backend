@@ -1,2 +1,14 @@
+#
+# Pycharm project settings
+#
 /.idea/
+
+#
+# Project sensitive settings
+#
 /api/sensitive_settings.py
+
+#
+# Python byte-compiled
+#
+__pycache__/
