@@ -14,6 +14,13 @@ import api.sensitive_settings
 ALLOWED_HOSTS = api.sensitive_settings.ALLOWED_HOSTS
 DATABASES = api.sensitive_settings.DATABASES
 SECRET_KEY = api.sensitive_settings.SECRET_KEY
+EMAIL_HOST = api.sensitive_settings.EMAIL_HOST
+EMAIL_PORT = api.sensitive_settings.EMAIL_PORT
+EMAIL_HOST_USER = api.sensitive_settings.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = api.sensitive_settings.EMAIL_HOST_PASSWORD
+EMAIL_USE_TLS = api.sensitive_settings.EMAIL_USE_TLS
+DEFAULT_FROM_EMAIL = api.sensitive_settings.DEFAULT_FROM_EMAIL
+SERVER_EMAIL = api.sensitive_settings.SERVER_EMAIL
 
 #
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -35,10 +42,11 @@ DEBUG = True
 #
 INSTALLED_APPS = [
     #
-    # Third party applications
+    # Grappelli admin
     #
     'grappelli.dashboard',
     'grappelli',
+
     #
     # Django applications
     #
@@ -48,6 +56,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #
+    # Third party applications
+    #
+    'admin_honeypot',
+
     #
     # api project's applications
     #
@@ -122,3 +136,11 @@ AUTH_USER_MODEL = 'login.Login'
 #
 GRAPPELLI_INDEX_DASHBOARD = 'api.grappelli_dashboard.dashboard.CustomIndexDashboard'
 GRAPPELLI_ADMIN_TITLE = "LOD"
+
+#
+# Django honeypot
+#
+ADMINS = [
+    ('Thierry', 'mail@thierry-decker.com'),
+]
+ADMIN_HONEYPOT_EMAIL_ADMINS = True
