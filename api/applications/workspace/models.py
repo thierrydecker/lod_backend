@@ -8,14 +8,14 @@ from api.applications.login.models import Login
 class Workspace(models.Model):
     id = models.UUIDField(
             primary_key=True,
-            default=uuid.uuid4(),
+            default=uuid.uuid4,
     )
     related_login = models.ForeignKey(
             Login,
             on_delete=models.CASCADE,
     )
     description = models.CharField(
-            max_length=30,
+            max_length=150,
     )
 
     class Meta:

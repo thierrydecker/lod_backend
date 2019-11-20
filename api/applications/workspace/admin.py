@@ -4,5 +4,5 @@ from .models import Workspace
 
 
 @admin.register(Workspace)
-class LoginAdmin(admin.ModelAdmin):
-    pass
+class WorkspaceAdmin(admin.ModelAdmin):
+    list_display = ('related_login_id', 'description')
