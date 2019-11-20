@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     # api project's applications
     #
     'api.applications.login.apps.LoginConfig',
+    'api.applications.workspace.apps.WorkspaceConfig',
 ]
 
 MIDDLEWARE = [
