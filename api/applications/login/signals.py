@@ -28,4 +28,7 @@ def logins_post_delete_handler(**kwargs):
 
 
 def loaded():
+    #
+    # Dummy function called from apps
+    #
     pass
