@@ -12,7 +12,7 @@ class Workspace(models.Model):
     )
     related_login = models.ForeignKey(
             Login,
-            on_delete=models.CASCADE,
+            on_delete=models.PROTECT,
     )
     description = models.CharField(
             max_length=150,
