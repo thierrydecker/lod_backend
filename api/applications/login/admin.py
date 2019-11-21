@@ -8,7 +8,6 @@ from .models import Login
 class LoginAdmin(UserAdmin):
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
-        print(form.base_fields)
         is_superuser = request.user.is_superuser
         disabled_fields = set()
         if (
