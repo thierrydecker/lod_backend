@@ -3,9 +3,11 @@ import uuid
 from django.db import models
 
 from api.applications.login.models import Login
+from api.applications.workspace.models import Workspace
 
 
-class Workspace(models.Model):
+class Membership(models.Model):
+
     id = models.UUIDField(
             primary_key=True,
             default=uuid.uuid4,
@@ -14,13 +16,11 @@ class Workspace(models.Model):
             Login,
             on_delete=models.PROTECT,
     )
-    description = models.CharField(
-            max_length=150,
+    related_workspace = models.ForeignKey(
+            Workspace,
+            on_delete=models.PROTECT,
     )
 
-    def __str__(self):
-        login = Login.objects.get(pk=self.related_login_id)
-        return f'{login.username} ({self.description})'
-
     class Meta:
-        db_table = 'workspaces'
+        db_table = 'memberships'
+        unique_together = ('related_login', 'related_workspace',)
