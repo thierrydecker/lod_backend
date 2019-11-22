@@ -8,6 +8,7 @@ psycopg2 = "*"
 django = "*"
 django-grappelli = "*"
 django-admin-honeypot = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
