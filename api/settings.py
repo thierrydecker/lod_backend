@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     # Third party applications
     #
     'admin_honeypot',
+    'rest_framework',
 
     #
     # api project's applications
