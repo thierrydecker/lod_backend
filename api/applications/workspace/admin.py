@@ -1,12 +1,8 @@
 from django.contrib import admin
 
+import api.applications.membership.admin
 from api.applications.membership.models import Membership
 from .models import Workspace
-
-
-class MembershipInline(admin.TabularInline):
-    model = Membership
-    fields = ('related_login',)
 
 
 @admin.register(Workspace)
@@ -15,5 +11,5 @@ class WorkspaceAdmin(admin.ModelAdmin):
     readonly_fields = ['id']
     list_filter = ('related_login',)
     inlines = [
-        MembershipInline,
+        api.applications.membership.admin.MembershipInline,
     ]
