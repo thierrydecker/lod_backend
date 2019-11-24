@@ -1,11 +1,16 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
+import api.applications.membership.admin
 from .models import Login
 
 
 @admin.register(Login)
 class LoginAdmin(UserAdmin):
+    inlines = [
+        api.applications.membership.admin.MembershipInline,
+    ]
+
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
         is_superuser = request.user.is_superuser
