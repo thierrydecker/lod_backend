@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     'api.applications.login.apps.LoginConfig',
     'api.applications.workspace.apps.WorkspaceConfig',
     'api.applications.membership.apps.MembershipConfig',
+    'api.applications.product.apps.ProductConfig',
 ]
 
 MIDDLEWARE = [
