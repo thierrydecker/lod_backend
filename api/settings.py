@@ -70,6 +70,7 @@ INSTALLED_APPS = [
     'api.applications.workspace.apps.WorkspaceConfig',
     'api.applications.membership.apps.MembershipConfig',
     'api.applications.product.apps.ProductConfig',
+    'api.applications.rest.apps.RestConfig',
 ]
 
 MIDDLEWARE = [

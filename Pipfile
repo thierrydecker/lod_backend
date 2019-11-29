@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 psycopg2 = "*"
-django = "*"
+Django = "*"
 django-grappelli = "*"
 django-admin-honeypot = "*"
 djangorestframework = "*"

@@ -19,7 +19,7 @@ class Workspace(models.Model):
     )
 
     def __str__(self):
-        login = Login.objects.get(pk=self.related_login_id)
+        login = Login.objects.get(pk=self.related_login)
         return f'{login.username} ({self.description})'
 
     class Meta:
